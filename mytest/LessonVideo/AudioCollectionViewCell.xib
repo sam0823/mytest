@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AudioCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wac-GR-iwC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUm-ID-bNo">
+                        <rect key="frame" x="0.0" y="180" width="414" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="FKm-gE-fAf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh7-jX-zud">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="wZ8-kz-2PC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEV-xB-xtg">
+                        <rect key="frame" x="184" y="85" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="playBtnClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="LW5-z5-e7S"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Wac-GR-iwC" secondAttribute="trailing" id="0x3-WL-UC1"/>
+                <constraint firstAttribute="trailing" secondItem="uh7-jX-zud" secondAttribute="trailing" id="8BP-xF-ekS"/>
+                <constraint firstItem="MEV-xB-xtg" firstAttribute="centerY" secondItem="Wac-GR-iwC" secondAttribute="centerY" id="LFD-Zk-KWm"/>
+                <constraint firstItem="Wac-GR-iwC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ogg-kS-fx3"/>
+                <constraint firstAttribute="trailing" secondItem="WUm-ID-bNo" secondAttribute="trailing" id="Pra-eH-xZ2"/>
+                <constraint firstAttribute="bottom" secondItem="Wac-GR-iwC" secondAttribute="bottom" id="biX-yQ-I6m"/>
+                <constraint firstItem="MEV-xB-xtg" firstAttribute="centerX" secondItem="Wac-GR-iwC" secondAttribute="centerX" id="iaO-9V-7dq"/>
+                <constraint firstItem="WUm-ID-bNo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sdI-5O-ocf"/>
+                <constraint firstItem="Wac-GR-iwC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vMa-Jx-bLZ"/>
+                <constraint firstItem="uh7-jX-zud" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vQT-Io-y0M"/>
+                <constraint firstAttribute="bottom" secondItem="WUm-ID-bNo" secondAttribute="bottom" id="wK4-oP-cDq"/>
+                <constraint firstItem="uh7-jX-zud" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zJ2-KW-CfW"/>
+            </constraints>
+            <size key="customSize" width="228" height="50"/>
+            <connections>
+                <outlet property="backgroundImageview" destination="Wac-GR-iwC" id="t2r-2i-cst"/>
+                <outlet property="sendButton" destination="MEV-xB-xtg" id="4xF-j2-30N"/>
+                <outlet property="textLabel" destination="WUm-ID-bNo" id="w8i-cj-ErE"/>
+                <outlet property="timeLabel" destination="uh7-jX-zud" id="rGQ-qT-gpv"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="366"/>
+        </collectionViewCell>
+    </objects>
+</document>
